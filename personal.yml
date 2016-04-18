@@ -1,0 +1,35 @@
+---
+- hosts: bare_workstation
+  tasks: 
+  - name: Install barebones dev tools
+    apt: pkg=git state=installed update_cache=true
+    apt: pkg=curl state=installed 
+    apt: pkg=vim-nox state=installed 
+    sudo: yes
+    register: barebonesInstalled
+    notify:
+    - something stupid
+
+  - name: Create structure
+    file: path=~/workspace state=directory
+    file: path=~/workspace/src state=directory
+    file: path=~/Software state=directory
+    file: path=~/apps state=directory
+    file: path=~/zzzzAnsible state=directory
+    register: structureCreated
+  
+  - name: Install ohmyzsh
+    command: curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > install_ohmyzsh.sh
+    command: pwd
+    command: whoami
+    #command: bash install_ohmyzsh.sh
+    when: barebonesInstalled|success and barebonesInstalled|success
+    register: ohmyzshInstalled
+
+  - name: Custom ohmyzsh
+    command: echo "ahora es cuando customizamos el shell desde el repo"
+    when: ohmyzshInstalled
+    
+  handlers:
+  - name: something stupid
+    service: name=puppet state=stopped
