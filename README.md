@@ -12,7 +12,10 @@ and give you the access details of such a thing.
 
 ## Usage 
 
-look at the `barebones.sh` file to get an idea. Then you can just run it
+look at the `barebones.sh` file to get an idea. Then you can just run it.
+
+It requires that you have an AWS cli correctly confirured. It also requires that the key you are using is the key configured. 
+It doesn't configure keys automatically
 
 
 ## Current status
@@ -24,3 +27,5 @@ look at the `barebones.sh` file to get an idea. Then you can just run it
 - do all that using authenticated repos and not public ones?
 
 - maybe one day include the local workstation as well?
+
+- make sure we use the correct key to connect to the instance
