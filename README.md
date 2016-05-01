@@ -10,6 +10,11 @@ This is part of a bigger effort, to have a remote work station, with some basics
 
 and give you the access details of such a thing. 
 
+## Usage 
+
+look at the `barebones.sh` file to get an idea. Then you can just run it
+
+
 ## Current status
 
 - it provisions some basic software. but I don't understand where is doing it, not in the machine.
