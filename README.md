@@ -10,6 +10,10 @@ This is part of a bigger effort, to have a remote work station, with some basics
 
 and give you the access details of such a thing. 
 
+## Current status
+
+- it provisions some basic software. but I don't understand where is doing it, not in the machine.
+
 ## Improvements
 
 - do all that using authenticated repos and not public ones?
