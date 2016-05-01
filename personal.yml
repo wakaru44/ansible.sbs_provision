@@ -1,5 +1,5 @@
 ---
-- hosts: bare_workstation
+- hosts: personal
   tasks: 
   - name: Install barebones dev tools
     apt: pkg=git state=installed update_cache=true
@@ -29,6 +29,9 @@
   - name: Custom ohmyzsh
     command: echo "ahora es cuando customizamos el shell desde el repo"
     when: ohmyzshInstalled
+
+  - name: setup aws creds
+    command: echo {{ creds }} > ~/FAKECREDS
     
   handlers:
   - name: something stupid

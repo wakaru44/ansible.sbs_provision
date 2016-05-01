@@ -3,3 +3,7 @@ archive
 tmp
 *log
 *dat
+ENV
+
+ # python stuff
+ *pyc
