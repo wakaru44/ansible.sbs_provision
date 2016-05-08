@@ -17,9 +17,8 @@ inventory:
 	bash tool_create_inventory.sh
 
 long-describe:
-	mkdir -p tmp; aws ec2 describe-instances > tmp/instances.json; python prettyprintec2.py
+	 aws  ec2 describe-instances  --query 'Reservations[*].Instances[*].[InstanceId,Tags,PublicDnsName,KeyName]'
 
 describe:
-	mkdir -p tmp; aws ec2 describe-instances > tmp/instances.json; python prettyprintec2.py | grep "ublicDns\|stack-name" | grep -A 1 ec2
-
+	aws  ec2 describe-instances  --query 'Reservations[*].Instances[*].[InstanceId,Tags,PublicDnsName,KeyName]'  --output text | grep -B 1 stack-name
 
