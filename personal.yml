@@ -2,9 +2,12 @@
 - hosts: personal
   tasks: 
   - name: Install barebones dev tools
-    apt: pkg=git state=installed update_cache=true
-    apt: pkg=curl state=installed 
-    apt: pkg=vim-nox state=installed 
+    apt: pkg={{item}} state=installed update_cache=true
+    with_items:
+      - curl
+      - vim-nox
+      - git
+      - zsh
     sudo: yes
     register: barebonesInstalled
     notify:
@@ -24,11 +27,14 @@
     #file: path=~/zzzzAnsible state=directory
     register: structureCreated
   
-  - name: Install ohmyzsh
+  - name: Obtain ohmyzsh
     command: curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > install_ohmyzsh.sh
-    command: cd
-    command: bash install_ohmyzsh.sh
     when: barebonesInstalled|success and barebonesInstalled|success
+    register: ohmyzshObtained
+
+  - name: Install ohmyzsh
+    command: bash install_ohmyzsh.sh
+    when: ohmyshObtained
     register: ohmyzshInstalled
 
   - name: Custom ohmyzsh
