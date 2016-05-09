@@ -11,3 +11,5 @@ echo "---" > $INVFILE
 # add details
 echo "[personal]" > $INVFILE
 echo "ubuntu@$IDNS" >> $INVFILE
+
+vim $INVFILE
