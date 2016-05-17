@@ -13,33 +13,12 @@
     notify:
     - something stupid
 
-  - name: Create structure
-    file: path=~/{{item}} state=directory
-    with_items:
-      - workspace/src
-      - workspace
-      - Software
-      - apps
-      - zzyyAnsible
-    #file: path=~/workspace/src state=directory
-    #file: path=~/Software state=directory
-    #file: path=~/apps state=directory
-    #file: path=~/zzzzAnsible state=directory
-    register: structureCreated
-  
-  - name: Obtain ohmyzsh
-    get_url: url=https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh dest=install_ohmyzsh.sh mode=777
-    when: barebonesInstalled|success and barebonesInstalled|success
-    register: ohmyzshObtained
 
-  - name: Install ohmyzsh
-    command: bash install_ohmyzsh.sh
-    when: ohmyshObtained
-    register: ohmyzshInstalled
+  - include: tasks/workspace.yml
 
-  - name: Custom ohmyzsh
-    command: echo "ahora es cuando customizamos el shell desde el repo"
-    when: ohmyzshInstalled
+  - include: tasks/ohmyzsh.yml
+
+  - include: tasks/vim.yml
 
   - name: setup aws creds
     command: echo {{ creds }} > ~/FAKECREDS
@@ -47,3 +26,4 @@
   handlers:
   - name: something stupid
     service: name=puppet state=stopped
+
