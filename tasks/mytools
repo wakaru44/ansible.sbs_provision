@@ -1,0 +1,11 @@
+
+  - name: get repos
+    git: repo={{item.repo}}
+         dest= {{item.dest}}
+    with_items:
+      - { repo: "https://github.com/wakaru44/my_dockerplace.git",
+          dest: "/home/ubuntu/apps/my_dockerplace"}
+      - { repo: "https://github.com/wakaru44/docker.ui.git",
+          dest: "/home/ubuntu/apps/docker.ui"}
+
+

@@ -1,0 +1,15 @@
+
+
+  - name: Create structure
+    file: path=~/{{item}} state=directory
+    with_items:
+      - workspace/src
+      - workspace
+      - Software
+      - apps
+    #file: path=~/workspace/src state=directory
+    #file: path=~/Software state=directory
+    #file: path=~/apps state=directory
+    #file: path=~/zzzzAnsible state=directory
+    register: structureCreated
+

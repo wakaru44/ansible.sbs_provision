@@ -1,0 +1,20 @@
+
+  
+  - name: Obtain ohmyzsh
+    get_url: url=https://raw.githubusercontent.com/juanantoniofm/oh-my-zsh/master/tools/install-passive.sh dest=~/install_ohmyzsh.sh mode=777
+    when: barebonesInstalled|success
+    register: ohmyzshObtained
+
+  - name: Install ohmyzsh
+    command: bash install_ohmyzsh.sh
+    when: ohmyzshObtained
+    register: ohmyzshInstalled
+
+  - name: Custom ohmyzsh
+    command: echo "ahora es cuando customizamos el shell desde el repo, or something"
+    when: ohmyzshInstalled
+
+      
+  # we should be taking the customizations from a personal repo. 
+  # or at the bare minimum, changing the theme to somtehngi better.
+  # Some of the customizations we need is the ip of the machine. either external or internal

@@ -28,7 +28,7 @@
     register: structureCreated
   
   - name: Obtain ohmyzsh
-    command: curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > install_ohmyzsh.sh
+    get_url: url=https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh dest=install_ohmyzsh.sh mode=777
     when: barebonesInstalled|success and barebonesInstalled|success
     register: ohmyzshObtained
 
