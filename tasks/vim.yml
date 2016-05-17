@@ -2,10 +2,6 @@
   
   - name: Obtain vim
     git: repo=https://github.com/wakaru44/vimrc.git dest=~/.vim
-    #when: barebonesInstalled|success
-    register: vimObtained
 
   - name: Custom vim
     command: bash .vim/setup-passive.sh 
-    when: vimObtained
-
