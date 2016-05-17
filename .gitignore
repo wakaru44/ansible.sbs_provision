@@ -2,6 +2,7 @@
 archive
 tmp
 .tmp
+.ansible
 *log
 *dat
 ENV

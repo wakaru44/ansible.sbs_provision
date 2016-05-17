@@ -11,7 +11,7 @@ help:
 
 
 provision:
-	ansible-playbook -i .ansible/hosts.tmp -e creds=secretfoo personal.yml
+	ansible-playbook -i .ansible/hosts.tmp -e creds=secretfoo personal.yml -vv
 
 inventory:
 	bash tool_create_inventory.sh
