@@ -9,3 +9,6 @@ ENV
 
  # python stuff
  *pyc
+
+ # Ansible stuff
+ *retry
