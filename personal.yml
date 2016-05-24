@@ -1,5 +1,12 @@
 ---
 - hosts: personal
+  sudo: yes
+  #TODO: move sudo to become using sudo
+  roles:
+    - franklinklim.docker
+    - franklinklim.docker-compose
+  vars:
+    docker_compose_version: 1.5.1
   tasks: 
   - name: Install barebones dev tools
     apt: pkg={{item}} state=installed update_cache=true
@@ -8,7 +15,6 @@
       - vim-nox
       - git
       - zsh
-    sudo: yes
     register: barebonesInstalled
     notify:
     - something stupid
@@ -20,6 +26,8 @@
 
   - include: tasks/vim.yml
 
+  - include: tasks/mytools.yml
+
   - name: setup aws creds
     command: echo {{ creds }} > ~/FAKECREDS
     
@@ -27,3 +35,5 @@
   - name: something stupid
     service: name=puppet state=stopped
 
+    #TODO: fix locale on the machine with 
+    # update-locale LANG=en_GB.UTF-8 LC_MESSAGES=POSIX
