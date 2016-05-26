@@ -4,4 +4,5 @@
     git: repo=https://github.com/wakaru44/vimrc.git dest=~/.vim
 
   - name: Custom vim
-    command: bash .vim/setup-passive.sh 
+    command: bash ~/.vim/setup-passive.sh 
+    # TODO: add the submodules into my repo, so they can be easily downloaded and installed.
