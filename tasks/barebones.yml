@@ -1,0 +1,10 @@
+
+  - name: Install barebones dev tools
+    apt: pkg={{item}} state=installed update_cache=true
+    with_items:
+      - curl
+      - vim-nox
+      - git
+      - zsh
+      - zip
+    notify:
