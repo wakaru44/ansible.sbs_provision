@@ -22,3 +22,5 @@ long-describe:
 describe:
 	aws  ec2 describe-instances  --query 'Reservations[*].Instances[*].[InstanceId,Tags,PublicDnsName,KeyName]'  --output text | grep -B 1 stack-name
 
+bump:
+	python -c "fh=open('version.md');c=fh.readline();n=map(lambda x: int(x),c.split('.'));print '.'.join(map(str, [n[0],n[1],n[2]+1]))"
