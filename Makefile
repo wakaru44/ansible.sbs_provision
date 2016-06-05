@@ -8,6 +8,7 @@ help:
 	@echo "describe       - describe the instances for me please ";
 	@echo "long-describe  - full detail of the instances ";
 	@echo "bump           - Bump the version file";
+	@echo "todo           - show the TO DO's and tasks";
 	@echo "";
 
 
@@ -25,3 +26,6 @@ describe:
 
 bump:
 	python -c "fh=open('version.md');c=fh.readline();n=map(lambda x: int(x),c.split('.'));print '.'.join(map(str, [n[0],n[1],n[2]+1]))"
+
+todo:
+	grep  -r "TODO:" * --exclude-dir ENV --exclude Makefile

@@ -1,4 +1,5 @@
 
+#TODO: this structure is created (wrongly) as root. fix it.
 
   - name: Create structure
     file: path=~/{{item}} state=directory
