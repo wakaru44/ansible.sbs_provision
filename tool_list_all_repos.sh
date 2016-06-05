@@ -2,7 +2,7 @@
 
 echo "List all the repos by one user"
 
-USER="wakaru44"
+USER="juanantoniofm"
 SITE="github.com"
 BASELOCATION="/home/ubuntu/workspace/src/${SITE}/${USER}"
 
@@ -14,7 +14,7 @@ curl https://api.github.com/users/${USER}/repos | jq ".[]?.clone_url"
 curl https://api.github.com/users/${USER}/repos | jq ".[]?.clone_url" > .ansible/${USER}.${SITE}.repos
 
 # Then, use that file to get the locations where you are going to put those files
-for url in $(cat .ansible/${USER}.${SITE}.repos ); do echo "${BASELOCATION}/$(basename $url | sed 's/\.git\"//g')" ; done > .ansible/${USER}.${SITE}.localpath
+for url in $(cat .ansible/${USER}.${SITE}.repos ); do echo "\"${BASELOCATION}/$(basename $url | sed 's/\.git\"//g')\"" ; done > .ansible/${USER}.${SITE}.localpath
 
 # and finally, I guess we will be
 #    - putting all that together in a yaml like file???
