@@ -7,6 +7,7 @@ help:
 	@echo "inventory      - create an inventory file to be edited";
 	@echo "describe       - describe the instances for me please ";
 	@echo "long-describe  - full detail of the instances ";
+	@echo "bump           - Bump the version file";
 	@echo "";
 
 

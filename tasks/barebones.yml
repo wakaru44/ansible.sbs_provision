@@ -7,4 +7,3 @@
       - git
       - zsh
       - zip
-    notify:
