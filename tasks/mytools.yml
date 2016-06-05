@@ -1,5 +1,5 @@
 
-  - name: get repos
+  - name: get apps from source code
     git: repo={{item.repo}}
          dest={{item.dest}}
     with_items:
