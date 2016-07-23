@@ -18,54 +18,43 @@
     git: repo={{item.repo}}
          dest={{item.dest}}
     with_items:
-      - { repo: "https://github.com/wakaru44/ansible.personal.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/ansible.personal" }
-      - { repo: "https://github.com/wakaru44/api_ab_test.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/api_ab_test" }
-      - { repo: "https://github.com/wakaru44/aws_lambda.personal_api_base.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/aws_lambda.personal_api_base" }
-      - { repo: "https://github.com/wakaru44/aws_lambda.python_boilerplate.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/aws_lambda.python_boilerplate" }
-      - { repo: "https://github.com/wakaru44/capitulizer.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/capitulizer" }
-      - { repo: "https://github.com/wakaru44/chrome-ext-cura-a-la-insensibilidad.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/chrome-ext-cura-a-la-insensibilidad" }
-      - { repo: "https://github.com/wakaru44/chrome-ext-venezuela-no-more.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/chrome-ext-venezuela-no-more" }
-      - { repo: "https://github.com/wakaru44/cordova.simplebuttonstack.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/cordova.simplebuttonstack" }
-      - { repo: "https://github.com/wakaru44/docker-minecraft-client.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/docker-minecraft-client" }
-      - { repo: "https://github.com/wakaru44/docker.flask_service_boilerplate.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/docker.flask_service_boilerplate" }
-      - { repo: "https://github.com/wakaru44/docker.sbs_flask_api.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/docker.sbs_flask_api" }
-      - { repo: "https://github.com/wakaru44/docker.ui.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/docker.ui" }
-      - { repo: "https://github.com/wakaru44/docker.url_check_service.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/docker.url_check_service" }
-      - { repo: "https://github.com/wakaru44/dvorak_spanish_layout.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/dvorak_spanish_layout" }
-      - { repo: "https://github.com/wakaru44/flask.sbs_api.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/flask.sbs_api" }
-      - { repo: "https://github.com/wakaru44/flask_service_boilerplate.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/flask_service_boilerplate" }
-      - { repo: "https://github.com/wakaru44/minitools.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/minitools" }
-      - { repo: "https://github.com/wakaru44/my_dockerplace.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/my_dockerplace" }
-      - { repo: "https://github.com/wakaru44/neural-style.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/neural-style" }
-      - { repo: "https://github.com/wakaru44/qwerty-dvorak-converter.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/qwerty-dvorak-converter" }
-      - { repo: "https://github.com/wakaru44/radiofaba.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/radiofaba" }
-      - { repo: "https://github.com/wakaru44/troposphere.workstation.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/troposphere.workstation" }
-      - { repo: "https://github.com/wakaru44/try_git.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/try_git" }
-      - { repo: "https://github.com/wakaru44/url_check_service.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/url_check_service" }
-      - { repo: "https://github.com/wakaru44/vimrc.git",
-          dest: "/home/ubuntu/workspace/src/github.com/wakaru44/vimrc" }
-
+      - { "repo": https://github.com/juanantoniofm/accesible-moodle.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/accesible-moodle },
+      - { "repo": https://github.com/juanantoniofm/ansible.nginx_role.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/ansible.nginx_role },
+      - { "repo": https://github.com/juanantoniofm/blog.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/blog },
+      - { "repo": https://github.com/juanantoniofm/chigrin.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/chigrin },
+      - { "repo": https://github.com/juanantoniofm/code-by-voice.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/code-by-voice },
+      - { "repo": https://github.com/juanantoniofm/docker.apprecious.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/docker.apprecious },
+      - { "repo": https://github.com/juanantoniofm/docker.orientdb.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/docker.orientdb },
+      - { "repo": https://github.com/juanantoniofm/exercise.trinode.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/exercise.trinode },
+      - { "repo": https://github.com/juanantoniofm/FliKISS.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/FliKISS },
+      - { "repo": https://github.com/juanantoniofm/goapi.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/goapi },
+      - { "repo": https://github.com/juanantoniofm/greaper.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/greaper },
+      - { "repo": https://github.com/juanantoniofm/kafka-campc.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/kafka-campc },
+      - { "repo": https://github.com/juanantoniofm/kafka-dockerized-cluster.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/kafka-dockerized-cluster },
+      - { "repo": https://github.com/juanantoniofm/oh-my-zsh.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/oh-my-zsh },
+      - { "repo": https://github.com/juanantoniofm/pizza-py-party.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/pizza-py-party },
+      - { "repo": https://github.com/juanantoniofm/pycomplexity.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/pycomplexity },
+      - { "repo": https://github.com/juanantoniofm/pythoniter.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/pythoniter },
+      - { "repo": https://github.com/juanantoniofm/radiofaba.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/radiofaba },
+      - { "repo": https://github.com/juanantoniofm/recopilatron.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/recopilatron },
+      - { "repo": https://github.com/juanantoniofm/wakarudacity-cs253.git,
+            "dest": /home/ubuntu/workspace/src/github.com/juanantoniofm/wakarudacity-cs253 },

@@ -37,3 +37,20 @@ It doesn't configure keys automatically
 
 - the vimrc repo has some dependencies not specified in submodules
 
+- install chrome 
+    
+
+      This worked for me (all other methods suggested got me very lost):
+
+      Download the package (64 bit):
+
+      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+      Install the package, forcing install of dependencies:
+
+      sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+
+      In case any dependencies diddnt install (you would have a warning or failure message for this), you can force them via:
+
+      sudo apt-get install -f
+
