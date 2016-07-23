@@ -12,6 +12,19 @@ and give you the access details of such a thing.
 
 ## Usage 
 
+- first install virtualenv and the dependencies, or just the dependencies with pip:
+
+    virtualenv env
+    source env/bin/activate
+    # if you don't want to use virtualenv, only run the last step
+    pip install -r requirements
+
+- then you need to generate your inventory, and sync your repos
+
+    make inventory
+    make updaterepos
+
+
 look at the `barebones.sh` file to get an idea. Then you can just run it.
 
 It requires that you have an AWS cli correctly confirured. It also requires that the key you are using is the key configured. 
@@ -32,8 +45,6 @@ It doesn't configure keys automatically
 
 
 ## TODO / TOFIX
-
-- the repos for the sbs stack have been renamed
 
 - the vimrc repo has some dependencies not specified in submodules
 
