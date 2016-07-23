@@ -29,3 +29,11 @@ It doesn't configure keys automatically
 - maybe one day include the local workstation as well?
 
 - make sure we use the correct key to connect to the instance
+
+
+## TODO / TOFIX
+
+- the repos for the sbs stack have been renamed
+
+- the vimrc repo has some dependencies not specified in submodules
+
