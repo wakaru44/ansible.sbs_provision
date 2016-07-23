@@ -1,9 +1,13 @@
-
+#!/usr/bin/ python
 
 print "Just combine both list of repos and local paths"
 
-with open(".ansible/juanantoniofm.github.com.repos") as f1:
-    with open(".ansible/juanantoniofm.github.com.localpath") as f2:
+username="juanantoniofm"
+
+
+
+with open(".ansible/{0}.github.com.repos".format(username)) as f1:
+    with open(".ansible/{0}.github.com.localpath".format(username)) as f2:
         def listero(repo,local):
             print """      - {{ "repo": {0},
             "dest": {1} }},""".format(repo.strip(" \n\t\"") ,local.strip(" \n\t\""))

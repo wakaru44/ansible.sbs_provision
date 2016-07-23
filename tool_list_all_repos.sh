@@ -2,7 +2,7 @@
 
 echo "List all the repos by one user"
 
-USER="juanantoniofm"
+USER="wakaru44"
 SITE="github.com"
 BASELOCATION="/home/ubuntu/workspace/src/${SITE}/${USER}"
 
