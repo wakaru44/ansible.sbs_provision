@@ -6,7 +6,7 @@ import json
 
 print "Just combine both list of repos and local paths"
 
-username="juanantoniofm"
+username="wakaru44"
 site="github.com" # could be github.com or bitbucket.com
 base_location="~/workspace/src/{SITE}/{USER}".format(SITE=site,USER=username)
 
