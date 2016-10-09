@@ -33,7 +33,7 @@ It doesn't configure keys automatically
 
 ## Current status
 
-- it provisions some basic software. but I don't understand where is doing it, not in the machine.
+- it provisions some basic software, and clones all the github repos.
 
 ## Improvements
 
@@ -46,6 +46,8 @@ It doesn't configure keys automatically
    - ideally, include in the readme the raw url of the script so it can curl | sudo bash 'ed.
 
 - make sure we use the correct key to connect to the instance
+
+- install and configure oh-my-zsh
 
 
 ## TODO / TOFIX
