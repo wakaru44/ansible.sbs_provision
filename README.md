@@ -39,7 +39,11 @@ It doesn't configure keys automatically
 
 - do all that using authenticated repos and not public ones?
 
+- fix the inventory creation so the user is specified as ansible parameter, not as "user@host", that causes failures.
+
 - maybe one day include the local workstation as well?
+   - have a local workstation bootstrap to make it easy to use for new computers too.
+   - ideally, include in the readme the raw url of the script so it can curl | sudo bash 'ed.
 
 - make sure we use the correct key to connect to the instance
 
