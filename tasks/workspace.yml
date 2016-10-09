@@ -2,6 +2,7 @@
 #TODO: this structure is created (wrongly) as root. fix it.
 
   - name: Create structure
+    become: no
     file: path=~/{{item}} state=directory
     with_items:
       - workspace/src
@@ -15,6 +16,7 @@
     register: structureCreated
 
   - name: get projects
+    become: no
     git: repo={{item.repo}}
          dest={{item.dest}}
     with_items:
@@ -42,8 +44,6 @@
                 "dest": "~/workspace/src/github.com/wakaru44/docker.flask_service_boilerplate" }
       - { "repo": "https://github.com/wakaru44/docker.sbs_api_extend.git",
                 "dest": "~/workspace/src/github.com/wakaru44/docker.sbs_api_extend" }
-      - { "repo": "https://github.com/wakaru44/docker.ui.git",
-                "dest": "~/workspace/src/github.com/wakaru44/docker.ui" }
       - { "repo": "https://github.com/wakaru44/docker.url_check_service.git",
                 "dest": "~/workspace/src/github.com/wakaru44/docker.url_check_service" }
       - { "repo": "https://github.com/wakaru44/dvorak_spanish_layout.git",
